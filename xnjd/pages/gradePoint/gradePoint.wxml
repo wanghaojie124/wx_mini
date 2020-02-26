@@ -1,0 +1,72 @@
+<view class="location" style="margin-top: {{ statusBarHeight }}px">
+    <image mode="aspectFill" src="../../images/return.png" bindtap="returnPage" />绩点计算器
+</view>
+
+<!-- 头部 -->
+<view class='user'>
+    <image mode="aspectFill" src="{{ userInfo.avatarUrl }}" class="author-img" />
+    <view>
+        <text>{{ relaName }}</text>
+        <text>{{ college }}</text>
+    </view>
+</view>
+
+<!-- 成绩 -->
+<view class='card score'>
+    <view>
+        <text>{{ averageScore }}</text>
+        <text>平均成绩</text>
+    </view>
+    <view>
+        <text>{{ academicCredits }}</text>
+        <text>学分绩点</text>
+    </view>
+    <view>
+        <text>{{ alreadyCredits }}</text>
+        <text>总学分</text>
+    </view>
+</view>
+
+<!-- <view class='tips'>
+    <text>*若成绩未更新，可能由于未刷新/评课，请操作后重试。</text>
+</view> -->
+
+<!-- 绩点选择 -->
+<view class='card' style='padding:0 32rpx;'>
+    <van-checkbox-group value="{{ gredeSelectList }}" bind:change="onChange">
+        <van-collapse value="{{ activeName }}" bind:change="onChangeColl" accordion>
+            <van-collapse-item name="{{ item.name1 }}" wx:for="{{ grede }}" wx:key="unique" is-link="{{isLink}}">
+                <view slot="title">
+                    <view class='line'>{{ item.name }}</view>
+                </view>
+                <view slot="right-icon">
+                    <van-checkbox shape="square" name="{{ item.name1 }}"></van-checkbox>
+                </view>
+                <!-- 学期内部课程表 -->
+                <view class="class_box" wx:for="{{ item.list }}" wx:key="unique" wx:for-item="item_i" wx:for-index="i">
+                    <view class="class_box_left">{{item_i.course}}</view>
+                    <view class="class_box_right">
+                        <van-icon name="success" wx:if="{{ item_i.isShow }}"/>
+                    </view>
+                </view>
+            </van-collapse-item>
+        </van-collapse>
+        
+    </van-checkbox-group>
+</view>
+
+<view class='bottomBox'>
+    <view class='content'>
+        <view class='flex_box'>已选
+            <text>{{maxLength}}</text>门</view>
+        <view class='flex_box'>
+            <view class='flex_box' style='padding:0 24rpx'>去除限修
+                <van-checkbox class='ml12' shape="square" value="{{ checkedA }}" bind:change="onChangeTypeA"></van-checkbox>
+            </view>
+            <view class='flex_box'>去除选修
+                <van-checkbox class='ml12' shape="square" value="{{ checkedB }}" bind:change="onChangeTypeB"></van-checkbox>
+            </view>
+        </view>
+    </view>
+    <view class="btn" bindtap="scoreCount">开始计算</view>
+</view>

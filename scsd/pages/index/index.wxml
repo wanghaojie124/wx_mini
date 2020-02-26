@@ -1,0 +1,152 @@
+<!--地址-->
+<view class="location" style="margin-top: {{ statusBarHeight }}px">四川师范大学</view>
+
+<!--banner-->
+<view class="banner-block">
+    <swiper indicator-dots="true" indicator-color="#ffffff" indicator-active-color="#1989fa" circular="true" autoplay="true" interval="3000" duration="500">
+        <block wx:for="{{ bannerList }}" wx:key="unique">
+            <swiper-item bindtap="bannerTo" data-index="{{ index }}">
+                <image mode="aspectFill" src="{{ item.image }}" />
+            </swiper-item>
+        </block>
+    </swiper>
+</view>
+
+<!--滚动广告-->
+<view class="ad-block">
+    <image mode="aspectFill" src="../../images/notice.png" />
+    <swiper autoplay="true" interval="3000" duration="500" circular="true" vertical="true">
+        <block wx:for="{{ adList }}" wx:key="unique">
+            <swiper-item bindtap="adTo" data-index="{{ index }}">
+                {{ item.title }}
+            </swiper-item>
+        </block>
+    </swiper>
+</view>
+
+<!--九宫格-->
+<view class="grid-block">
+    <van-row>
+        <van-col span="6" bindtap="openGradePoint">
+            <image mode="aspectFill" src="../../images/icon_2.png" />
+            <text>绩点</text>
+        </van-col>
+        <van-col span="6" bindtap="openGrade">
+            <image mode="aspectFill" src="../../images/icon_1.png" />
+            <text>成绩</text>
+        </van-col>
+        <van-col span="6" bindtap="openCurriculum">
+            <image mode="aspectFill" src="../../images/icon_4.png" />
+            <text>课表</text>
+        </van-col>
+        <van-col span="6" bindtap="showClass">
+            <image mode="aspectFill" src="../../images/icon_7.png" />
+            <text>一键评课</text>
+        </van-col>
+    </van-row>
+    <van-row>
+        <van-col span="6" bindtap="openArticle">
+            <image mode="aspectFill" src="../../images/icon_8.png" />
+            <text>校历</text>
+        </van-col>
+        <van-col span="6" bindtap="showToast">
+            <image mode="aspectFill" src="../../images/icon_5.png" />
+            <text>快递代取</text>
+        </van-col>
+        <van-col span="6" bindtap="openOptimization">
+            <image mode="aspectFill" src="../../images/icon_6.png" />
+            <text>外卖送寝</text>
+        </van-col>
+        <van-col span="6" bindtap="openOptimization">
+            <image mode="aspectFill" src="../../images/icon_3.png" />
+            <text>川师优选</text>
+        </van-col>
+    </van-row>
+</view>
+
+<!--课表-->
+<view class="timetable-block" wx:if="{{ todayclass.length != 0 }}">
+    <view class="timetable-title" bindtap="openCurriculum">
+        <view>{{ timetable.time1 }} <text>{{ timetable.time2 }}</text></view>
+        <text>查看全部</text>
+    </view>
+    <view class="timetable-box">
+        <view class="timetable-shadow">
+            <van-row wx:for="{{ todayclass }}" wx:key="unique">
+                <van-col span="4" class="col1">{{ item.jie }}-{{ item.end }}节</van-col>
+                <van-col span="12" class="col2">{{ item.name }}</van-col>
+                <van-col span="8" class="col3">{{ item.address }}</van-col>
+            </van-row>
+        </view>
+    </view>
+</view>
+
+<!--川师优选-->
+<view class="seckill-block" wx:if="{{ todaySeckill.length != 0 }}">
+    <view class="seckill-title" bindtap="openRushToBuy">
+        <view>川师优选</view>
+        <text>查看全部</text>
+        <!-- <text>{{ nowIndex }} / {{ allIndex }}</text> -->
+    </view>
+    <swiper autoplay="true" interval="3000" duration="500" circular="true" bindchange="seckillChange" previous-margin="40px" next-margin="40px">
+        <block wx:for="{{ todaySeckill }}" wx:key="unique">
+            <swiper-item bindtap="seckillTo" data-index="{{ index }}">
+                <view class="seckill-list">
+                    <view class="seckill">
+                        <view class="seckill-img">
+                            <image mode="aspectFill" src="{{ item.image }}" />
+                        </view>
+                        <view class="seckill-info">
+                            <view>{{ item.title }}</view>
+                            <view>￥{{ item.bargain_price }}</view>
+                            <view>￥{{ item.price }}</view>
+                            <view>立即购买</view>
+                        </view>
+                    </view>
+                </view>
+            </swiper-item>
+        </block>
+    </swiper>
+</view>
+
+<!--资讯列表-->
+<view class="sticky">
+    <view class="navigation-bar" style="height: {{ statusBarHeight }}px"></view>
+    <scroll-view scroll-x class="scroll-screen" scroll-with-animation>
+        <view wx:for="{{ articleType }}" wx:key="unique" bindtap="activeScreen" data-index="{{ index }}" class="screen {{ activeScreen == index ? 'active-screen' : '' }}">{{ item }}</view>
+    </scroll-view>
+</view>
+<view class="article-block">
+    <view wx:for="{{ articleList }}" wx:key="unique" class="article-list" bindtap="articleTo" data-index="{{ index }}">
+        <image mode="aspectFill" src="{{ item.image }}" />
+        <view class="article-title">{{ item.intro ? item.intro : item.content }}</view>
+        <view class="article-info">
+            <text>{{ item.create_at }}</text>
+            <text>{{ item.type }}</text>
+        </view>
+    </view>
+</view>
+
+<!--返回顶部-->
+<view class="top" hidden="{{ !floorStatus }}" bindtap="goTop">
+    <image mode="aspectFit" src="../../images/top.png" />
+</view>
+
+<!--评课-->
+<van-popup show="{{ showCode }}" bind:close="onClose">
+    <view class="refresh-popup">
+        <view class="form-list">
+            <view class="form-input">
+                <input bindinput="codeInput" value="{{ code }}" type="text" placeholder="验证码" />
+            </view>
+            <image class="form-code" bindtap="refreshCode" mode="aspectFit" src="data:image/jpeg;base64,{{ imageCode }}" />
+        </view>
+        <view class='tips'>
+            <text>*本功能将会自动评价所有课程，并默认「全满分好评」，预计15分钟内完成评课。完成评课后「刷新成绩」即可获取最新成绩。</text>
+            <!-- <text>完成评课后「刷新成绩」即可获取最新成绩。</text> -->
+        </view>
+        <view class="form-btn">
+            <van-button type="info" size="large" bindtap="classSure">一键评课</van-button>
+        </view>
+    </view>
+</van-popup>

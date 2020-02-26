@@ -1,0 +1,36 @@
+<view class="location" style="margin-top: {{ statusBarHeight }}px">
+    <image mode="aspectFill" src="../../images/return.png" bindtap="returnPage" />登录
+</view>
+
+<!--登陆-->
+<view class="login-head">
+    <image mode="aspectFill" src="../../images/college_logo.png" />
+    <view>西南交通大学</view>
+</view>
+
+<view class="form-block">
+    <view class="form-list">
+        <view class="form-title">学　号</view>
+        <view class="form-input">
+            <input bindinput="usernameInput" value="{{ username }}" type="number" placeholder="请输入教务处登陆账号" />
+        </view>
+    </view>
+    <view class="form-list">
+        <view class="form-title">密　码</view>
+        <view class="form-input">
+            <input bindinput="passwordInput" value="{{ password }}" type="password" placeholder="请输入教务处登陆密码" />
+        </view>
+    </view>
+</view>
+
+<view class="form-btn">
+    <view class="{{ loginBtn == 0 ? 'login-gray' : 'login-btn' }}" bindtap="login">绑定学号并登录</view>
+    <view class="login-forget">
+        <text bindtap="forgetPass">忘记密码</text> | <text bindtap="noAccount">没有账号</text>
+    </view>
+</view>
+
+<view class="tips">
+    <text>Copyright@2018-2019</text>
+    <text>成都薪火相传教育科技有限公司</text>
+</view>

@@ -1,0 +1,241 @@
+/*地址*/
+
+.location {
+    height: 44px;
+    line-height: 44px;
+    padding: 0 30rpx;
+    font-size: 30rpx;
+    margin-bottom: 4px;
+}
+
+.location image {
+    width: 36rpx;
+    height: 36rpx;
+    vertical-align: middle;
+    margin-top: -4rpx;
+    margin-right: 10rpx;
+}
+
+/*头部*/
+
+.user {
+    margin: 40rpx 32rpx 70rpx;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.user > view text {
+    display: block;
+}
+
+.user > view text:first-child {
+    color: #333;
+    font-size: 40rpx;
+    line-height: 56rpx;
+    margin-bottom: 18rpx;
+}
+
+.user > view text:last-child {
+    color: #999;
+    font-size: 28rpx;
+    line-height: 40rpx;
+}
+
+.author-img {
+    position: relative;
+    width: 140rpx;
+    height: 140rpx;
+    border-radius: 50%;
+    vertical-align: middle;
+    margin: 0 32rpx 0 8rpx;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+}
+
+.btn {
+    position: absolute;
+    right: 0;
+    color: #fff;
+    font-size: 24rpx;
+    line-height: 48rpx;
+    height: 48rpx;
+    padding: 0 20rpx;
+    background: linear-gradient(315deg, rgba(27, 136, 249, 1) 0%, rgba(102, 209, 255, 1) 100%);
+    top: 0;
+    border-radius: 4px;
+}
+
+.btn2 {
+    top: 68rpx;
+}
+
+/* card */
+
+.card {
+    margin: 32rpx;
+    box-shadow: 0px 2px 6px 0px rgba(190, 190, 190, 0.5);
+    border-radius: 10rpx;
+    overflow: hidden;
+    padding: 24rpx 32rpx;
+}
+
+.score {
+    display: flex;
+    align-items: center;
+    padding: 32rpx 0;
+}
+
+.score view {
+    flex: 1;
+    position: relative;
+}
+
+.score view::after {
+    content: '';
+    display: block;
+    border-right: 1px solid #d8d8d8;
+    height: 40rpx;
+    margin-top: -20rpx;
+    top: 50%;
+    right: 0;
+    position: absolute;
+}
+
+.score view:last-child:after {
+    display: none;
+}
+
+.score view text {
+    display: block;
+    text-align: center;
+}
+
+.score view text:first-child {
+    color: #30373f;
+    font-size: 48rpx;
+    line-height: 58rpx;
+    font-weight: bold;
+}
+
+.score view text:last-child {
+    color: #999;
+    font-size: 24rpx;
+    line-height: 34rpx;
+    margin-top: 16rpx;
+}
+
+.title {
+    margin: 0 32rpx;
+    padding-top: 24rpx;
+}
+
+.title text {
+    line-height: 56rpx;
+}
+
+.title text:first-child {
+    color: #30373f;
+    font-size: 40rpx;
+    font-weight: bold;
+}
+
+/* 
+.title text:last-child {
+    color: #999;
+    font-size: 28rpx;
+} */
+
+.card .list .row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card .list .row:first-child {
+    font-weight: 700;
+}
+
+.card .list .row > view {
+    padding: 18rpx 0;
+    font-size: 30rpx;
+}
+
+.card .list .row > view:nth-child(1) {
+    width: 68vw;
+    /* display: flex; */
+    align-items: center;
+}
+
+.card .list .row > view:nth-child(2), .card .list .row > view:nth-child(3) {
+    width: 16vw;
+    text-align: center;
+}
+
+.title_tag {
+    border: 1px solid #999;
+    color: #999;
+    border-radius: 8rpx;
+    line-height: 32rpx;
+    padding: 0 10rpx;
+    margin-left: 20rpx;
+    font-size: 20rpx;
+    height: 32rpx;
+    word-break: break-all;
+    display: inline-block;
+}
+
+.fail {
+    color: #ee0a24;
+    font-weight: 700;
+}
+
+.hidden {
+    display: none;
+}
+
+.tips {
+    margin: 32rpx 0;
+    font-size: 25rpx;
+    line-height: 28rpx;
+}
+
+.tips text {
+    display: block;
+    text-align: center;
+    color: #666;
+}
+
+/*刷新*/
+
+.refresh-popup {
+    width: 500rpx;
+    height: 300rpx;
+    padding: 30rpx;
+}
+
+.form-list {
+    position: relative;
+    display: flex;
+    border-bottom: 1px solid #f5f5f5;
+}
+
+.form-input {
+    flex: 5;
+}
+
+.form-input input {
+    height: 100rpx;
+    line-height: 100rpx;
+}
+
+.form-code {
+    position: absolute;
+    right: 0;
+    width: 180rpx;
+    height: 100%;
+    z-index: 10;
+}
+
+.form-btn {
+    margin-top: 50rpx;
+}

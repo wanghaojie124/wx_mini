@@ -1,0 +1,72 @@
+<view class="location" style="margin-top: {{ statusBarHeight }}px">
+    <image mode="aspectFill" src="../../images/return.png" bindtap="returnPage" />绩点
+</view>
+
+<!--头部-->
+<view class='user'>
+    <image mode="aspectFill" src="{{ userInfo.avatarUrl }}" class="author-img" />
+    <view>
+        <text>{{ relaName }}</text>
+        <text>{{ college }}</text>
+    </view>
+    <view class="btn" bindtap="refreshSure">刷新成绩</view>
+    <view class="btn btn2" bindtap="showClass">一键评课</view>
+</view>
+
+<!--成绩-->
+<view class='card score'>
+    <view>
+        <text>{{ averageScore }}</text>
+        <text>平均成绩</text>
+    </view>
+    <view>
+        <text>{{ academicCredits }}</text>
+        <text>学分绩点</text>
+    </view>
+    <view>
+        <text>{{ alreadyCredits }}</text>
+        <text>已修学分</text>
+    </view>
+</view>
+
+<view class='tips'>
+    <text>*若成绩未更新，可能由于未刷新/评课，请操作后重试。</text>
+</view>
+
+<!--分-->
+<view wx:for="{{ grede }}" wx:key="unique">
+    <view class='title'>
+        <text>{{ item.name }}</text>
+        <!-- <text>（{{ item.nameB }}）</text> -->
+    </view>
+
+    <view class='card'>
+        <view class='list'>
+            <view class='row'>
+                <view>课程名称</view>
+                <view>学分</view>
+                <view>成绩</view>
+            </view>
+            <view class="row {{ item_i.score - 60 >= 0 ? '' : 'fail' }}" wx:for="{{ item.list }}" wx:for-item="item_i" wx:for-index="i" wx:key="unique">
+                <view>
+                    <text>{{ item_i.course }}</text>
+                    <text class="title_tag {{ item_i.xuanxiu == '必修' ? 'hidden' : '' }}">{{ item_i.xuanxiu == '必修' ? '' : item_i.xuanxiu }}</text>
+                </view>
+                <view>{{ item_i.xuefen }}</view>
+                <view>{{ item_i.score }}</view>
+            </view>
+        </view>
+    </view>
+</view>
+
+<!--评课-->
+<van-popup show="{{ showCode }}" bind:close="onClose">
+    <view class="refresh-popup">
+        <view class='tips'>
+            <text>*本功能将会自动评价所有课程，并默认「全满分好评」，预计3分钟内完成评课。完成评课后「刷新成绩」即可获取最新成绩。</text>
+        </view>
+        <view class="form-btn">
+            <van-button type="info" size="large" bindtap="classSure">一键评课</van-button>
+        </view>
+    </view>
+</van-popup>

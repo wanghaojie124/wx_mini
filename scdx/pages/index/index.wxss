@@ -1,0 +1,402 @@
+image {
+    height: 100%;
+}
+
+.tips {
+    margin: 32rpx 0;
+    font-size: 25rpx;
+    line-height: 28rpx;
+}
+
+.tips text {
+    display: block;
+    text-align: left;
+    color: #666;
+}
+
+/*地址*/
+
+.location {
+    height: 44px;
+    line-height: 44px;
+    padding: 0 30rpx;
+    font-size: 30rpx;
+    margin-bottom: 4px;
+}
+
+/*banner*/
+
+.banner-block {
+    padding: 0 30rpx;
+}
+
+.banner-block swiper {
+    position: relative;
+    height: 310rpx;
+    display: flex;
+    overflow: hidden;
+}
+
+.banner-block image {
+    border-radius: 10rpx;
+}
+
+/*滚动广告*/
+
+.ad-block {
+    position: relative;
+    padding: 0 60rpx;
+    margin-top: -40rpx;
+}
+
+.ad-block swiper {
+    position: relative;
+    height: 80rpx;
+    line-height: 80rpx;
+    display: flex;
+    background-color: #fff;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 8rpx;
+    padding: 0 30rpx 0 120rpx;
+    font-size: 26rpx;
+}
+
+.ad-block image {
+    position: absolute;
+    top: 16rpx;
+    left: 80rpx;
+    width: 70rpx;
+    height: 50rpx;
+    z-index: 20;
+}
+
+/*九宫格*/
+
+.grid-block {
+    text-align: center;
+    margin-top: 36rpx;
+    font-size: 26rpx;
+    color: #666;
+}
+
+.grid-block image {
+    width: 100rpx;
+    height: 100rpx;
+    display: block;
+    margin: 16rpx auto 0;
+}
+
+.grid-block text {
+    display: block;
+    text-align: center;
+    font-size: 24rpx;
+    line-height: 34rpx;
+    color: #999;
+    padding: 12rpx 0;
+}
+
+/*课表*/
+
+.timetable-block {
+    margin-top: 50rpx;
+}
+
+.timetable-title {
+    padding: 0 30rpx;
+    font-weight: bold;
+    font-size: 40rpx;
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.timetable-title text {
+    font-weight: initial;
+    color: #666;
+    font-size: 26rpx;
+}
+
+.timetable-title > text {
+    font-size: 24rpx;
+    color: #999;
+}
+
+.timetable-box {
+    padding: 30rpx;
+}
+
+.timetable-shadow {
+    padding: 0 20rpx;
+    border-radius: 10rpx;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+}
+
+.timetable-shadow van-row {
+    font-size: 28rpx;
+    display: block;
+    padding: 28rpx 0;
+    border-bottom: #ebf0f5 1px solid;
+}
+
+.timetable-shadow van-row:last-child {
+    border-bottom: none;
+}
+
+.timetable-shadow .col1 {
+    color: #999;
+    font-size: 28rpx;
+}
+
+.timetable-shadow .col2 {
+    color: #333;
+    font-size: 30rpx;
+}
+
+.timetable-shadow .col3 {
+    color: #ff8080;
+    font-size: 30rpx;
+    text-align: right;
+}
+
+.timetable-shadow .van-col {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+}
+
+/*川大优选*/
+
+.seckill-block {
+    margin-top: 50rpx;
+}
+
+.seckill-title {
+    padding: 0 30rpx;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.seckill-title view {
+    font-size: 40rpx;
+}
+
+.seckill-title text {
+    font-weight: initial;
+    font-size: 26rpx;
+    color: #666;
+}
+
+.seckill-title > text {
+    font-size: 24rpx;
+    color: #999;
+}
+
+.seckill-block swiper {
+    height: 260rpx;
+    border-radius: 8rpx;
+}
+
+.seckill-block .seckill-list {
+    height: 210rpx;
+    margin: 30rpx 16rpx;
+    border-radius: 10rpx;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+}
+
+.seckill {
+    padding: 30rpx 20rpx;
+    display: flex;
+}
+
+.seckill-img {
+    flex: 1;
+}
+
+.seckill-img image {
+    width: 154rpx;
+    height: 154rpx;
+}
+
+.seckill-info {
+    position: relative;
+    flex: 2;
+    padding-left: 20rpx;
+}
+
+.seckill-info view:nth-child(1) {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    font-size: 28rpx;
+    height: 78rpx;
+}
+
+.seckill-info view:nth-child(2) {
+    color: #ee0a24;
+    font-size: 30rpx;
+    font-weight: bold;
+}
+
+.seckill-info view:nth-child(3) {
+    color: #999;
+    font-size: 24rpx;
+    text-decoration: line-through;
+}
+
+.seckill-info view:nth-child(4) {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(315deg, rgba(27, 136, 249, 1) 0%, rgba(102, 209, 255, 1) 100%);
+    box-shadow: 0px 2px 3px 0px rgba(201, 230, 255, 1);
+    color: #fff;
+    text-align: center;
+    font-size: 24rpx;
+    border-radius: 8rpx;
+    padding: 12rpx 0;
+    width: 146rpx;
+}
+
+/*资讯列表*/
+
+.sticky {
+    position: sticky;
+    top: 0;
+}
+
+.navigation-bar {
+    background-color: #fff;
+}
+
+.sticky {
+    padding: 0 30rpx;
+}
+
+.sticky scroll-view {
+    width: 100%;
+    height: 100rpx;
+    line-height: 100rpx;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 32rpx;
+    color: #333;
+    background-color: #fff;
+    z-index: 100;
+}
+
+.sticky .screen {
+    font-weight: bold;
+    display: inline-block;
+    font-size: 32rpx;
+    color: #999;
+    margin-right: 30rpx;
+}
+
+.sticky .active-screen {
+    font-size: 40rpx;
+    color: #333;
+}
+
+.article-block {
+    padding: 0 30rpx;
+}
+
+.article-list {
+    border-bottom: 1px solid #f5f5f5;
+    box-shadow: 0px 2px 8px 0px rgba(190, 190, 190, 0.5);
+    border-radius: 20rpx;
+    overflow: hidden;
+    padding-bottom: 20rpx;
+    margin-bottom: 32rpx;
+}
+
+.article-list image {
+    height: 300rpx;
+    border-radius: 10rpx;
+}
+
+.article-title {
+    font-size: 28rpx;
+    font-weight: bold;
+    margin-top: 10rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    padding: 0 32rpx;
+}
+
+.article-info {
+    padding: 0 32rpx;
+}
+
+.article-info text {
+    font-size: 22rpx;
+    color: #999;
+    margin-right: 20rpx;
+}
+
+/*返回顶部*/
+
+.top {
+    position: fixed;
+    bottom: 70rpx;
+    right: 30rpx;
+    background-color: #fff;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+    text-align: center;
+    font-size: 38rpx;
+    font-weight: 600;
+    width: 80rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    z-index: 10;
+}
+
+.top image {
+    width: 50rpx;
+}
+
+/*刷新*/
+
+.refresh-popup {
+    width: 500rpx;
+    height: 300rpx;
+    padding: 30rpx;
+}
+
+.form-list {
+    position: relative;
+    display: flex;
+    border-bottom: 1px solid #f5f5f5;
+}
+
+.form-input {
+    flex: 5;
+}
+
+.form-input input {
+    height: 100rpx;
+    line-height: 100rpx;
+}
+
+.form-code {
+    position: absolute;
+    right: 0;
+    width: 180rpx;
+    height: 100%;
+    z-index: 10;
+}
+
+.form-btn {
+    margin-top: 50rpx;
+}

@@ -1,0 +1,69 @@
+<view class="location" style="margin-top: {{ statusBarHeight }}px">
+    <image mode="aspectFill" src="../../images/return.png" bindtap="returnPage" />一键评课
+</view>
+
+<!--头部-->
+<view class='user'>
+    <image mode="aspectFill" src="{{ userInfo.avatarUrl }}" class="author-img" />
+    <view>
+        <text>{{ userInfo.nickName }}</text>
+        <text>{{ college }}</text>
+    </view>
+</view>
+
+<!--成绩-->
+<view class='card score'>
+    <view>
+        <text>{{ classData.length }}科</text>
+        <text>未评科目</text>
+    </view>
+    <view>
+        <text>{{ reviewTime }}分钟</text>
+        <text>预计用时</text>
+    </view>
+</view>
+
+<!-- <view class='tips'>
+    <text>*若成绩未更新，可能由于未刷新/评课，请操作后重试。</text>
+    <text>*本功能将会自动评价所有课程，并默认「全满分好评」，预计3分钟内完成评课。完成评课后「刷新成绩」即可获取最新成绩。</text>
+</view> -->
+
+<view class='card'>
+    <view class='list'>
+        <view class='row'>
+            <view>序号</view>
+            <view>课程</view>
+            <view>状态</view>
+        </view>
+        <view class="row" wx:for="{{ classData }}" wx:for-item="item_i" wx:for-index="i" wx:key="unique">
+            <view>{{ i + 1 }}</view>
+            <view>{{ item_i }}</view>
+            <view class="{{ reviewStatus ? 'red' : '' }}">{{ reviewStatus ? '一键评课中' : '待评课' }}</view>
+        </view>
+    </view>
+</view>
+
+<view class='bottomBox'>
+    <block wx:if="{{pageStatus == 0}}">
+        <view class="btn" bindtap="openGrade">评课完成，查看成绩</view>
+    </block>
+    <block wx:if="{{pageStatus == 1}}">
+        <view class="btn redBtn">评课中，{{timeOut}}后完成</view>
+    </block>
+    <block wx:if="{{pageStatus == 2}}">
+        <view class="btn" bindtap="classSure">一键评课</view>
+    </block>
+</view>
+
+
+<!--评课-->
+<van-popup show="{{ showCode }}" bind:close="onClose">
+    <view class="refresh-popup">
+        <view class='tips'>
+            <text>*本功能将会自动评价本学期所有课程，并默认「全满分好评」，预计3分钟内评价完成所有课程。由于网络波动因素影响，「一键评课」有小概率失败的可能。请稍后重新评课即可。完成评课后「刷新成绩」即可获取最新成绩。</text>
+        </view>
+        <view class="form-btn">
+            <van-button type="info" size="large" bindtap="onClose">我已知晓</van-button>
+        </view>
+    </view>
+</van-popup>

@@ -1,0 +1,14 @@
+{
+    "navigationBarTitleText": "查课表",
+    "backgroundColor": "#f5f5f5",
+    "backgroundTextStyle": "dark",
+    "navigationBarTextStyle": "black",
+    "backgroundColorTop": "#f5f5f5",
+    "backgroundColorBottom": "#f5f5f5",
+    "navigationStyle": "custom",
+    "enablePullDownRefresh": false,
+    "usingComponents": {
+        "van-icon": "../../dist/icon/index",
+        "van-popup": "../../dist/popup/index"
+    }
+}

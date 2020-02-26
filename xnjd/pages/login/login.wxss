@@ -1,0 +1,116 @@
+.location {
+    height: 44px;
+    line-height: 44px;
+    padding: 0 30rpx;
+    font-size: 30rpx;
+    margin-bottom: 4px;
+}
+
+.location image {
+    width: 36rpx;
+    height: 36rpx;
+    vertical-align: middle;
+    margin-top: -4rpx;
+    margin-right: 10rpx;
+}
+
+.input-placeholder {
+    color: #999;
+}
+
+/*登陆*/
+
+.login-head {
+    text-align: center;
+    margin-top: 80rpx;
+}
+
+.login-head image {
+    width: 100rpx;
+    height: 100rpx;
+}
+
+.login-head view {
+    margin-top: 20rpx;
+    font-size: 34rpx;
+    color: #30373f;
+    font-weight: bold;
+}
+
+.form-block {
+    margin-top: 100rpx;
+    padding: 0 50rpx;
+}
+
+.form-list {
+    position: relative;
+    display: flex;
+    border-bottom: 1px solid #f5f5f5;
+}
+
+.form-title {
+    line-height: 100rpx;
+    color: #30373f;
+    font-weight: bold;
+    flex: 1;
+}
+
+.form-input {
+    flex: 4;
+}
+
+.form-input input {
+    height: 100rpx;
+    line-height: 100rpx;
+}
+
+.form-code {
+    position: absolute;
+    right: 0;
+    width: 180rpx;
+    height: 100%;
+    z-index: 10;
+}
+
+.form-btn {
+    margin-top: 100rpx;
+    padding: 0 50rpx;
+}
+
+.login-gray {
+    background: #ddd;
+    color: #fff;
+    text-align: center;
+    font-size: 32rpx;
+    border-radius: 8rpx;
+    padding: 25rpx 0;
+}
+
+.login-btn {
+    background: linear-gradient(315deg, rgba(27, 136, 249, 1) 0%, rgba(102, 209, 255, 1) 100%);
+    box-shadow: 0px 2px 3px 0px rgba(201, 230, 255, 1);
+    color: #fff;
+    text-align: center;
+    font-size: 32rpx;
+    border-radius: 8rpx;
+    padding: 25rpx 0;
+}
+
+.login-forget {
+    text-align: center;
+    color: #1b88f9;
+    font-size: 28rpx;
+    margin-top: 30rpx;
+}
+
+.tips {
+    margin: 180rpx 0 50rpx;
+    font-size: 20rpx;
+    line-height: 28rpx;
+}
+
+.tips text {
+    display: block;
+    text-align: center;
+    color: #ddd;
+}

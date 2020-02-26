@@ -1,0 +1,22 @@
+{
+    "navigationBarTitleText": "查成绩",
+    "backgroundColor": "#f5f5f5",
+    "backgroundTextStyle": "dark",
+    "navigationBarTextStyle": "black",
+    "backgroundColorTop": "#f5f5f5",
+    "backgroundColorBottom": "#f5f5f5",
+    "navigationStyle": "custom",
+    "enablePullDownRefresh": false,
+    "usingComponents": {
+        "van-icon": "../../dist/icon/index",
+        "van-cell": "../../dist/cell/index",
+        "van-cell-group": "../../dist/cell-group/index",
+        "van-button": "../../dist/button/index",
+        "van-popup": "../../dist/popup/index",
+        "van-checkbox": "../../dist/checkbox/index",
+        "van-checkbox-group": "../../dist/checkbox-group/index",
+        "van-collapse": "../../dist/collapse/index",
+        "van-collapse-item": "../../dist/collapse-item/index",
+        "van-tag": "../../dist/tag/index"
+    }
+}

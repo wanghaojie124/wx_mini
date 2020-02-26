@@ -1,0 +1,83 @@
+<view class="location" style="margin-top: {{ statusBarHeight }}px">我的</view>
+
+<!--头部-->
+<view class="user" wx:if="{{ isLogin == 0 }}">
+    <view class="authorize">
+        <image mode="aspectFill" src="/images/author.png" class="author-img" />
+        <button open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo"></button>
+    </view>
+    <view class="author-name">
+        <button open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">点击登录</button>
+        <text>登录更精彩</text>
+    </view>
+</view>
+<view class="user" wx:elif="{{ isLogin == 1 }}">
+    <view class="authorize">
+        <image mode="aspectFill" src="{{ userInfo.avatarUrl }}" class="author-img" />
+        <button bindtap="login"></button>
+    </view>
+    <view>
+        <button bindtap="login">点击登录</button>
+        <text>登录更精彩</text>
+    </view>
+</view>
+<view class="user" wx:else>
+    <image mode="aspectFill" src="{{ userInfo.avatarUrl }}" class="author-img" />
+    <view>
+        <button>{{ userInfo.nickName }}</button>
+        <text>{{ college }}</text>
+    </view>
+</view>
+
+<!--操作-->
+<view class="card">
+    <van-cell-group>
+        <van-cell icon="/images/icon_order.png" size="large" is-link bindtap="openOrder">
+            <view slot="title">
+                <view class="van-cell-text">订单券码</view>
+            </view>
+        </van-cell>
+        <van-cell icon="/images/icon_customer.png" size="large" is-link>
+            <view slot="title">
+                <view class="van-cell-text">联系客服<button class="feed-back" open-type="contact"></button></view>
+            </view>
+        </van-cell>
+    </van-cell-group>
+</view>
+
+<!--操作-->
+<view class="card">
+    <van-cell-group>
+        <van-cell icon="/images/icon_refresh.png" size="large" is-link bindtap="refreshSure">
+            <view slot="title">
+                <view class="van-cell-text">刷新课表/成绩</view>
+            </view>
+        </van-cell>
+        <van-cell icon="/images/icon_question.png" size="large" is-link>
+            <view slot="title">
+                <view class="van-cell-text">问题反馈<button class="feed-back" open-type="feedback"></button></view>
+            </view>
+        </van-cell>
+        <van-cell icon="/images/icon_about.png" size="large" is-link bindtap="openAbout">
+            <view slot="title">
+                <view class="van-cell-text">关于我们</view>
+            </view>
+        </van-cell>
+    </van-cell-group>
+</view>
+
+<!--操作-->
+<view class="card" wx:if="{{ isLogin == 2 }}">
+    <van-cell-group>
+        <van-cell icon="/images/icon_switch.png" size="large" is-link bindtap="login">
+            <view slot="title">
+                <view class="van-cell-text">切换账号</view>
+            </view>
+        </van-cell>
+    </van-cell-group>
+</view>
+
+<view class="tips">
+    <text>Copyright@2018-2019</text>
+    <text>成都薪火相传教育科技有限公司</text>
+</view>

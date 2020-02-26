@@ -1,0 +1,260 @@
+/*课表*/
+
+.box {
+    position: relative;
+}
+
+.box .line1, .box .line2 {
+    position: absolute;
+    width: 100vw;
+    border-bottom: 1px solid #1989fa;
+    left: 0;
+    opacity: 0.4;
+}
+
+.box .line1 {
+    top: calc(76rpx + 52vw);
+}
+
+.box .line2 {
+    top: calc(76rpx + 104vw);
+}
+
+.curriculum {
+    display: flex;
+    background-color: #f4f7ff;
+    /* padding-bottom: 144rpx; */
+}
+
+.vertical {
+    width: 13.5vw;
+    text-align: center;
+}
+
+.vertical.fir {
+    width: 5vw;
+    line-height: 13vw;
+    background-color: #fff;
+}
+
+.vertical .line {
+    height: 13vw;
+    width: 100%;
+    overflow: hidden;
+}
+
+.vertical .line view {
+    height: 100%;
+}
+
+.vertical .line view text {
+    display: block;
+}
+
+.vertical.fir .line:first-child, .vertical .head {
+    height: 76rpx;
+    line-height: 36rpx;
+    font-size: 24rpx;
+}
+
+.vertical .head.active text {
+    color: #1989fa;
+}
+
+.vertical .head text {
+    display: block;
+}
+
+.vertical:not(.fir) .line {
+    font-size: 24rpx;
+    padding: 4rpx;
+    box-sizing: border-box;
+    word-break: break-all;
+}
+
+.vertical:not(.fir) .line view {
+    border-radius: 10rpx;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+.vertical:not(.fir) .line view text:last-child {
+    font-size: 20rpx;
+}
+
+.vertical > view:first-child {
+    background-color: #fff;
+}
+
+.vertical.fir .line {
+    font-size: 24rpx;
+}
+
+.vertical.fir .line:first-child {
+    font-size: 28rpx;
+    background-color: #6591fa;
+    color: #fff;
+}
+
+.show_false {
+    display: none !important;
+}
+
+.show_true {
+    display: block !important;
+    position: relative;
+    z-index: 1;
+}
+
+.long_1 {
+    height: 13vw !important;
+}
+
+.long_2 {
+    height: 26vw !important;
+}
+
+.long_3 {
+    height: 39vw !important;
+}
+
+.long_4 {
+    height: 52vw !important;
+}
+
+.long_5 {
+    height: 65vw !important;
+}
+
+.long_6 {
+    height: 78vw !important;
+}
+
+.long_7 {
+    height: 91vw !important;
+}
+
+.long_8 {
+    height: 104vw !important;
+}
+
+.long_9 {
+    height: 117vw !important;
+}
+
+.long_10 {
+    height: 130vw !important;
+}
+
+.long_11 {
+    height: 143vw !important;
+}
+
+.long_12 {
+    height: 156vw !important;
+}
+
+.long_13 {
+    height: 169vw !important;
+}
+
+.color_1 {
+    background: #8367AB;
+    color: #fff;
+}
+
+.color_2 {
+    background: #F9C26F;
+    color: #fff;
+}
+
+.color_3 {
+    background: #A8CA7F;
+    color: #fff;
+}
+
+.color_4 {
+    background: #EC6E53;
+    color: #fff;
+}
+
+.classDetail {
+    padding: 20rpx;
+}
+
+.classDetail view:nth-child(1) {
+    font-size: 40rpx;
+    font-weight: bold;
+    margin-bottom: 20rpx;
+}
+
+.classDetail view:nth-child(2) {
+    font-size: 32rpx;
+    font-weight: bold;
+    margin-bottom: 20rpx;
+}
+
+.classDetail view:nth-child(n + 2) {
+    display: flex;
+    /* align-items: center; */
+    justify-content: space-between;
+    margin-bottom: 20rpx;
+}
+
+.classDetail view:nth-child(n + 2) text {
+    flex: 1;
+    padding-right: 8rpx;
+}
+
+/* .bottom{position: fixed; bottom: 0; left: 0; right: 0;background: #fff; height: 80rpx; margin: 32rpx; border: 1px solid #1989fa; border-radius: 16rpx; overflow: hidden; display: flex; align-items: center; justify-content: space-between; z-index: 100;box-shadow:1px 1px 10px rgba(0, 0, 0, 0.2);}
+.bottom text{display: block; flex: 1; text-align: center; height: 80rpx; line-height: 80rpx; color: #1989fa}
+.bottom text:first-child{border-right: 1px solid #1989fa;} */
+
+/*地址*/
+
+.location {
+    height: 44px;
+    line-height: 44px;
+    padding: 0 30rpx;
+    font-size: 30rpx;
+    margin-bottom: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.location view {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.location image {
+    width: 36rpx;
+    height: 36rpx;
+    vertical-align: middle;
+    margin-top: -4rpx;
+    margin-right: 10rpx;
+}
+
+.btn_header {
+    margin: 0 12rpx;
+}
+
+.location text {
+    display: block;
+    width: 40rpx;
+}
+
+.btn {
+    color: #fff;
+    font-size: 24rpx;
+    line-height: 48rpx;
+    height: 48rpx;
+    padding: 0 20rpx;
+    background: linear-gradient(315deg, rgba(27, 136, 249, 1) 0%, rgba(102, 209, 255, 1) 100%);
+    border-radius: 4px;
+    margin-right: 12rpx
+}

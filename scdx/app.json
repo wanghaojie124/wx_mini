@@ -1,0 +1,62 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/user/user",
+        "pages/login/login",
+        "pages/curriculum/curriculum",
+        "pages/grade/grade",
+        "pages/gradePoint/gradePoint",
+        "pages/classReview/classReview",
+        "pages/webView/webView"
+    ],
+    "window": {
+        "navigationBarBackgroundColor": "#ffffff",
+        "navigationBarTextStyle": "black",
+        "backgroundColor": "#ffffff",
+        "backgroundTextStyle": "dark",
+        "enablePullDownRefresh": false,
+        "pageOrientation": "auto"
+    },
+    "tabBar": {
+        "color": "#999",
+        "selectedColor": "#1989fa",
+        "backgroundColor": "#fff",
+        "borderStyle": "black",
+        "list": [
+            {
+                "pagePath": "pages/index/index",
+                "text": "首页",
+                "iconPath": "images/nav1.png",
+                "selectedIconPath": "images/nav1_1.png"
+            },
+            {
+                "pagePath": "pages/user/user",
+                "text": "我的",
+                "iconPath": "images/nav3.png",
+                "selectedIconPath": "images/nav3_3.png"
+            }
+        ]
+    },
+    "networkTimeout": {
+        "request": 60000,
+        "connectSocket": 60000,
+        "uploadFile": 60000,
+        "downloadFile": 60000
+    },
+    "permission": {
+        "scope.userLocation": {
+            "desc": "你的位置信息将用于小程序位置接口的效果展示"
+        }
+    },
+    "debug": false,
+    "sitemapLocation": "sitemap.json",
+    "navigateToMiniProgramAppIdList": [
+        "wx9e8c0246883e813a",
+        "wxc9078bbf09823179",
+        "wx8c90308f0a605c75",
+        "wx971bd9ce41aa0463",
+        "wxffa73d48f8b994f3",
+        "wx0744f237b417cf9f",
+        "wx657c152706835faa"
+    ]
+}

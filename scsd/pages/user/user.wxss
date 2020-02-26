@@ -1,0 +1,141 @@
+button {
+    text-align: left;
+    padding: 0;
+    line-height: inherit;
+    background: none;
+    border: 0;
+    font-size: inherit;
+    color: inherit;
+}
+
+button::after, button::before {
+    display: none;
+}
+
+.location {
+    height: 44px;
+    line-height: 44px;
+    padding: 0 30rpx;
+    font-size: 30rpx;
+    margin-bottom: 4px;
+}
+
+/*头部*/
+
+.user {
+    margin: 40rpx 32rpx 70rpx;
+    display: flex;
+    align-items: center;
+}
+
+.user > view text {
+    display: block;
+}
+
+.user > view button {
+    color: #333;
+    font-size: 40rpx;
+    line-height: 56rpx;
+    margin-bottom: 18rpx;
+}
+
+.user > view text {
+    color: #999;
+    font-size: 28rpx;
+    line-height: 40rpx;
+}
+
+.author-img {
+    position: relative;
+    width: 140rpx;
+    height: 140rpx;
+    border-radius: 50%;
+    vertical-align: middle;
+    margin: 0 32rpx 0 8rpx;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+}
+
+.authorize {
+    position: relative;
+}
+
+.authorize button {
+    position: absolute;
+    top: 0;
+    width: 140rpx;
+    height: 140rpx;
+    left: 8rpx;
+    margin-bottom: 0;
+    opacity: 0;
+}
+
+/*刷新*/
+
+.refresh-popup {
+    width: 500rpx;
+    height: 250rpx;
+    padding: 30rpx;
+}
+
+.form-list {
+    position: relative;
+    display: flex;
+    border-bottom: 1px solid #f5f5f5;
+}
+
+.form-input {
+    flex: 5;
+}
+
+.form-input input {
+    height: 100rpx;
+    line-height: 100rpx;
+}
+
+.form-code {
+    position: absolute;
+    right: 0;
+    width: 180rpx;
+    height: 100%;
+    z-index: 10;
+}
+
+.form-btn {
+    margin-top: 50rpx;
+}
+
+/* card */
+
+.card {
+    margin: 40rpx 32rpx;
+    box-shadow: 0px 2px 6px 0px rgba(190, 190, 190, 0.5);
+    border-radius: 10rpx;
+    overflow: hidden;
+}
+
+.tips {
+    margin: 32rpx 0;
+    font-size: 20rpx;
+    line-height: 28rpx;
+}
+
+.tips text {
+    display: block;
+    text-align: center;
+    color: #ddd;
+}
+
+.van-cell-text {
+    padding-left: 20rpx;
+    color: #30373f;
+    font-size: 28rpx;
+}
+
+.feed-back {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    opacity: 0;
+}

@@ -1,0 +1,54 @@
+<view class="location" style="margin-top: {{ statusBarHeight }}px">
+    <image mode="aspectFill" src="../../images/return.png" bindtap="returnPage" />
+    <picker bindchange="bindPickerChange" value="{{pickerIndex}}" range="{{total_weeks_arr}}">
+        <view class="picker">
+            {{total_weeks_arr[pickerIndex]}} {{weekindex==0 ? '' : '(非本周)'}}
+            <van-icon name="arrow-down" class="btn_header" />
+        </view>
+    </picker>
+    <text></text>
+</view>
+
+<!--课表-->
+<view class='box'>
+    <!-- <view class='line1'></view>
+    <view class='line2'></view> -->
+
+    <view class='curriculum'>
+        <view class='vertical fir'>
+            <view class='line' wx:for="{{ time }}" wx:key="unique">{{ item }}</view>
+        </view>
+        <view class='vertical' wx:for="{{ curriculum }}" wx:key="unique">
+            <view class='head {{ today == day[index].text2 ? "active" : "" }}'>
+                <text>{{ day[index].text1 }}</text>
+                <text>{{ day[index].text2 }}日</text>
+            </view>
+            <view class='line long_{{ item_i.long }} show_{{ item_i.isShow }}' wx:for="{{ curriculum[index] }}" wx:for-item="item_i" wx:for-index="i" wx:key="unique" bindtap='openClassDetail' data-i="{{ index }}" data-j="{{ i }}">
+                <view class='color_{{ item_i.color }}'>
+                    <text>{{ item_i.className }}</text>
+                    <text>{{ item_i.classData[2] ? '@' + item_i.classData[2] : '' }}</text>
+                </view>
+            </view>
+        </view>
+    </view>
+
+    <!-- <view class="bottom">
+        <text bindtap="prevWeek">上周</text>
+        <text bindtap="nextWeek">下周</text>
+    </view> -->
+
+    <!--课表详情-->
+    <van-popup show="{{ show }}" bind:close="onClose" position="bottom" closeable custom-style="height: 30%">
+        <view class="classDetail">
+            <view>{{ todayTime }}</view>
+            <view>{{ name }}</view>
+            <view>
+                <text>地点：{{ address }}</text>
+                <text>老师：{{ techer }}</text>
+            </view>
+            <view>
+                <text>时间：{{ classTime }}</text>
+            </view>
+        </view>
+    </van-popup>
+</view>

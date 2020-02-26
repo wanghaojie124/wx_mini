@@ -1,0 +1,245 @@
+/*地址*/
+
+.location {
+    height: 44px;
+    line-height: 44px;
+    padding: 0 30rpx;
+    font-size: 30rpx;
+    margin-bottom: 4px;
+}
+
+.location image {
+    width: 36rpx;
+    height: 36rpx;
+    vertical-align: middle;
+    margin-top: -4rpx;
+    margin-right: 10rpx;
+}
+
+/*头部*/
+
+.user {
+    margin: 40rpx 32rpx 70rpx;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.user > view text {
+    display: block;
+}
+
+.user > view text:first-child {
+    color: #333;
+    font-size: 40rpx;
+    line-height: 56rpx;
+    margin-bottom: 18rpx;
+}
+
+.user > view text:last-child {
+    color: #999;
+    font-size: 28rpx;
+    line-height: 40rpx;
+}
+
+.author-img {
+    position: relative;
+    width: 140rpx;
+    height: 140rpx;
+    border-radius: 50%;
+    vertical-align: middle;
+    margin: 0 32rpx 0 8rpx;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+}
+
+/* card */
+
+.card {
+    margin: 32rpx;
+    box-shadow: 0px 2px 6px 0px rgba(190, 190, 190, 0.5);
+    border-radius: 10rpx;
+    overflow: hidden;
+    padding: 24rpx 32rpx;
+}
+
+.score {
+    display: flex;
+    align-items: center;
+    padding: 32rpx 0;
+}
+
+.score view {
+    flex: 1;
+    position: relative;
+}
+
+.score view::after {
+    content: '';
+    display: block;
+    border-right: 1px solid #d8d8d8;
+    height: 40rpx;
+    margin-top: -20rpx;
+    top: 50%;
+    right: 0;
+    position: absolute;
+}
+
+.score view:last-child:after {
+    display: none;
+}
+
+.score view text {
+    display: block;
+    text-align: center;
+}
+
+.score view text:first-child {
+    color: #30373f;
+    font-size: 48rpx;
+    line-height: 58rpx;
+    font-weight: bold;
+}
+
+.score view text:last-child {
+    color: #999;
+    font-size: 24rpx;
+    line-height: 34rpx;
+    margin-top: 16rpx;
+}
+
+.tips {
+    margin-bottom: 32rpx;
+    font-size: 25rpx;
+    line-height: 28rpx;
+}
+
+.tips text {
+    display: block;
+    text-align: center;
+    color: #666;
+}
+
+.btn {
+    color: #fff;
+    font-size: 32rpx;
+    line-height: 92rpx;
+    height: 92rpx;
+    padding: 0;
+    background: linear-gradient(315deg, rgba(27, 136, 249, 1) 0%, rgba(102, 209, 255, 1) 100%);
+    border-radius: 4px;
+    text-align: center;
+    flex: 1;
+}
+
+page {
+    padding-bottom: 152rpx;
+}
+
+.bottomBox {
+    position: fixed;
+    bottom: 0;
+    height: 152rpx;
+    padding: 32rpx;
+    width: 100%;
+    box-sizing: border-box;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bottomBox .content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30rpx;
+    line-height: 40rpx;
+    font-size: 28rpx;
+    color: #333;
+}
+
+.bottomBox .content text {
+    color: #1b88f9;
+    font-size: 36rpx;
+    line-height: 50rpx;
+    padding: 0 10rpx;
+    display: inline-block;
+}
+
+.flex_box {
+    display: flex;
+    align-items: center;
+}
+
+.ml12 {
+    margin-left: 12rpx;
+}
+
+.line {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ebf0f5;
+    padding: 32rpx 0;
+    color: #30373f;
+    font-size: 36rpx;
+    line-height: 50rpx;
+    font-weight: 700;
+}
+
+.line:first-child {
+    padding-top: 0;
+}
+
+.line:last-child {
+    border-bottom: 0;
+    padding-bottom: 0;
+}
+
+.card .list .row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card .list .row:first-child {
+    font-weight: 700;
+}
+
+.card .list .row > view {
+    padding: 18rpx 0;
+    font-size: 30rpx;
+}
+
+.card .list .row > view:nth-child(2) {
+    width: 56vw;
+    display: flex;
+    align-items: center;
+}
+
+.card .list .row > view:nth-child(1) {
+    width: 16vw;
+    text-align: center;
+}
+
+.card .list .row > view:nth-child(3) {
+    width: 28vw;
+    text-align: center;
+}
+
+.red {
+    color: red;
+}
+
+.redBtn{
+    background: red
+}
+
+
+/*刷新*/
+
+.refresh-popup {
+    width: 500rpx;
+    height: 280rpx;
+    padding: 30rpx;
+}
